@@ -34,7 +34,6 @@ newInterval.length == 2
 import java.util.*;
 class Insert_Interval {
     public int[][] insert(int[][] intervals, int[] newInterval) {
-
         List<int[]> ans = new ArrayList<>();
         int i = 0;
         int n = intervals.length;
