@@ -28,7 +28,7 @@ The number of nodes in the list is the range [0, 5000].
 
 */
 
-class Solution {
+class Reverse_Linked_List{
     public ListNode reverseList(ListNode head) {
         ListNode curr = head;
         ListNode prev = null;
