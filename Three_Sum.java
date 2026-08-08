@@ -36,30 +36,5 @@ class Three_Sum {
         
     }
 
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter size of array: ");
-
-        int n = sc.nextInt();
-
-        int[] arr = new int[n];
-
-        System.out.println("Enter array elements:");
-
-        for (int i = 0; i < n; i++) {
-
-            arr[i] = sc.nextInt();
-
-        }
-
-        Three_Sum sol = new Three_Sum();
-
-        List<List<Integer>> result = sol.threeSum(arr);
-
-        System.out.println(result);
-
-        sc.close();
-}
+   
 }
