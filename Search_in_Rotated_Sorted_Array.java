@@ -34,6 +34,61 @@ nums is an ascending array that is possibly rotated.
 
 */
 
+
+class Solution {
+    public int search(int[] nums, int target) {
+
+        int n = nums.length;
+        int low = 0;
+        int high = n - 1;
+
+        while (low <= high) {
+
+            int guess = (low + high) / 2;
+
+            if (nums[guess] == target) {
+                return guess;
+            }
+
+            if (nums[guess] > nums[n - 1]) {
+
+                if (nums[guess] < target) {
+                    low = guess + 1;
+                }
+                else {
+                    if (nums[0] > target) {
+                        low = guess + 1;
+                    }
+                    else {
+                        high = guess - 1;
+                    }
+                }
+            }
+
+            else {
+
+                if (nums[guess] > target) {
+                    high = guess - 1;
+                }
+                else {
+                    if (nums[n - 1] < target) {
+                        high = guess - 1;
+                    }
+                    else {
+                        low = guess + 1;
+                    }
+                }
+            }
+        }
+
+        return -1;
+    }
+}
+
+/* 
+
+Method 2 (Using Binary Search twice)
+
 class Search_in_Rotated_Sorted_Array {
     public int search(int[] nums, int target) {
 
@@ -104,3 +159,4 @@ class Search_in_Rotated_Sorted_Array {
         return res;
     }
 }
+*/
