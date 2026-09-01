@@ -1,4 +1,3 @@
-import java.util.* ;
 class Squares_of_sorted_array {
     public int[] sortedSquares(int[] nums) {
         int i =0 ;
